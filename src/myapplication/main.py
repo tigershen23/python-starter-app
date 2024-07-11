@@ -1,7 +1,11 @@
 from myapplication.settings import settings
 
 
-def main():
+def hello_world() -> str:
+    return "Hello World"
+
+
+def main() -> None:
     print(f"The value of DUMMY_CONFIG is: {settings.dummy_config}")  # noqa: T201
 
 

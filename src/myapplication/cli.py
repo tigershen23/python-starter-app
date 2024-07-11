@@ -4,7 +4,7 @@ app = typer.Typer()
 
 
 @app.command()
-def main(name: str, lastname: str = "", formal: bool = False):
+def main(name: str, lastname: str = "", formal: bool = False) -> None:
     """
     Say hi to NAME, optionally with a --lastname.
 
