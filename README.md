@@ -1,22 +1,4 @@
-<p align="center">
-  <a href="https://python-poetry.org/" target="blank"><img src="https://python-poetry.org/images/logo-origami.svg" height="100" alt="Poetry logo" /></a>
-  <a href="https://pre-commit.com/" target="blank"><img src="https://pre-commit.com/logo.svg" height="100" alt="pre-commit logo" /></a>
-  <a href="https://github.com/astral-sh/ruff" target="blank"><img src="https://raw.githubusercontent.com/astral-sh/ruff/8c20f14e62ddaf7b6d62674f300f5d19cbdc5acb/docs/assets/bolt.svg" height="100" alt="ruff logo" style="background-color: #ef5552" /></a>
-  <a href="https://bandit.readthedocs.io/" target="blank"><img src="https://raw.githubusercontent.com/pycqa/bandit/main/logo/logo.svg" height="100" alt="bandit logo" /></a>
-  <a href="https://docs.pytest.org/" target="blank"><img src="https://raw.githubusercontent.com/pytest-dev/pytest/main/doc/en/img/pytest_logo_curves.svg" height="100" alt="pytest logo" /></a></p>
-
-<p align="center">
-  <a href="https://docs.docker.com/" target="blank"><img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" height="60" alt="Docker logo" /></a>
-  <a href="https://github.com/features/actions" target="blank"><img src="https://avatars.githubusercontent.com/u/44036562" height="60" alt="GitHub Actions logo" /></a>
-</p>
-
 # Python boilerplate
-
-[![CodeQL](https://github.com/smarlhens/python-boilerplate/workflows/codeql/badge.svg)](https://github.com/smarlhens/python-boilerplate/actions/workflows/codeql.yml)
-[![GitHub CI](https://github.com/smarlhens/python-boilerplate/workflows/ci/badge.svg)](https://github.com/smarlhens/python-boilerplate/actions/workflows/ci.yml)
-[![GitHub license](https://img.shields.io/github/license/smarlhens/python-boilerplate)](https://github.com/smarlhens/python-boilerplate)
-
----
 
 ## Table of Contents
 
@@ -31,8 +13,8 @@
 ## Prerequisites
 
 - [Python](https://www.python.org/downloads/) **>=3.12 <3.13** (_tested with 3.12.3_)
+- [Pyenv](https://github.com/pyenv/pyenv)
 - [pre-commit](https://pre-commit.com/#install)
-- [poetry](https://python-poetry.org/docs/#installation) **>=1.2.2 <1.9** (_tested with 1.8.3_)
 - [docker](https://docs.docker.com/get-docker/) (_optional_)
 
 ---
@@ -42,22 +24,16 @@
 1. Clone the git repository
 
    ```bash
-   git clone https://github.com/smarlhens/python-boilerplate.git
+   git clone https://github.com/tigershen23/python-starter-app.git <myapplication>
    ```
 
 2. Go into the project directory
 
    ```bash
-   cd python-boilerplate/
+   cd <myapplication>
    ```
 
-3. Checkout working branch
-
-   ```bash
-   git checkout <branch>
-   ```
-
-4. Set up the development environment
+3. Set up the development environment
 
    ```bash
    pyenv virtualenv 3.12 <app name>
@@ -66,11 +42,11 @@
    make build
    ```
 
-5. Do a global search for "myapplication" and rename everything to your app name
+4. Do a global search for "myapplication" and rename everything to your app name
 
-6. Rename the directories and files containing "myapplication" to your app name
+5. Rename the directories and files containing "myapplication" to your app name
 
-7. Run `make run` to run the application
+6. Run `make run` to run the application
 
 ---
 
