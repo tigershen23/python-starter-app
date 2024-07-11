@@ -70,6 +70,8 @@
 
 6. Rename the directories and files containing "myapplication" to your app name
 
+7. Run `make run` to run the application
+
 ---
 
 ## What's in the box ?
@@ -150,6 +152,22 @@ myapplication tiger
 ```
 
 For more configuration options and details, see the [Typer documentation](https://typer.tiangolo.com/).
+
+### Modal Serverless App
+
+[Modal](https://modal.com/) is a platform for building and deploying serverless applications. This project includes a simple Modal app that demonstrates how to run Python functions in the cloud.
+
+**modal_app.py file** ([`modal_app.py`](modal_app.py)): defines a Modal application with a simple square function and a local entrypoint.
+
+The Modal app can be run using the following command:
+
+```bash
+modal run modal_app.py
+```
+
+This will execute the local entrypoint function, which in turn calls the remote square function and prints the result.
+
+For more configuration options and details, see the [Modal documentation](https://modal.com/docs).
 
 ---
 
