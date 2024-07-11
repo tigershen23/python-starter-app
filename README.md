@@ -3,8 +3,7 @@
   <a href="https://pre-commit.com/" target="blank"><img src="https://pre-commit.com/logo.svg" height="100" alt="pre-commit logo" /></a>
   <a href="https://github.com/astral-sh/ruff" target="blank"><img src="https://raw.githubusercontent.com/astral-sh/ruff/8c20f14e62ddaf7b6d62674f300f5d19cbdc5acb/docs/assets/bolt.svg" height="100" alt="ruff logo" style="background-color: #ef5552" /></a>
   <a href="https://bandit.readthedocs.io/" target="blank"><img src="https://raw.githubusercontent.com/pycqa/bandit/main/logo/logo.svg" height="100" alt="bandit logo" /></a>
-  <a href="https://docs.pytest.org/" target="blank"><img src="https://raw.githubusercontent.com/pytest-dev/pytest/main/doc/en/img/pytest_logo_curves.svg" height="100" alt="pytest logo" /></a>
-</p>
+  <a href="https://docs.pytest.org/" target="blank"><img src="https://raw.githubusercontent.com/pytest-dev/pytest/main/doc/en/img/pytest_logo_curves.svg" height="100" alt="pytest logo" /></a></p>
 
 <p align="center">
   <a href="https://docs.docker.com/" target="blank"><img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" height="60" alt="Docker logo" /></a>
@@ -126,6 +125,16 @@ For more configuration options and details, see the [configuration docs](https:/
 follow [PEP 257](https://peps.python.org/pep-0257/).
 
 Options are defined in the [`.pre-commit-config.yaml`](.pre-commit-config.yaml).
+
+### Pydantic
+
+[Pydantic](https://docs.pydantic.dev/) is a data validation and settings management library using Python type annotations. It's used in this project for managing configuration settings.
+
+**settings.py file** ([`src/myapplication/settings.py`](src/myapplication/settings.py)): defines the application settings using Pydantic's `BaseSettings` class.
+**.env file** ([`.env`](.env)): contains environment-specific settings that are loaded by Pydantic.
+**.env.sample file** ([`.env.sample`](.env.sample)): a template for the .env file, showing which environment variables are used by the application.
+
+For more configuration options and details, see the [Pydantic documentation](https://docs.pydantic.dev/).
 
 ---
 

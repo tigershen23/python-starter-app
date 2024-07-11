@@ -16,6 +16,8 @@ myapplication = "myapplication.main:main"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+pydantic = "2.8.2"
+pydantic-settings = "^2.3.4"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "8.2.2"
