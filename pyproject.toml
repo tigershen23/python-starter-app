@@ -11,13 +11,11 @@ readme = "README.md"
 homepage = "https://github.com/tigershen23/python-starter-app#readme"
 repository = "https://github.com/tigershen23/python-starter-app"
 
-[tool.poetry.scripts]
-myapplication = "myapplication.main:main"
-
 [tool.poetry.dependencies]
 python = "^3.12"
 pydantic = "2.8.2"
 pydantic-settings = "^2.3.4"
+typer = "^0.12.3"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "8.2.2"
@@ -26,6 +24,9 @@ mypy = "1.10.0"
 bandit = "1.7.9"
 docformatter = "1.7.5"
 ruff = "0.5.1"
+
+[tool.poetry.scripts]
+myapplication = "myapplication.cli:app"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

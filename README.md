@@ -136,6 +136,21 @@ Options are defined in the [`.pre-commit-config.yaml`](.pre-commit-config.yaml).
 
 For more configuration options and details, see the [Pydantic documentation](https://docs.pydantic.dev/).
 
+### Typer CLI
+
+[Typer](https://typer.tiangolo.com/) is a library for building CLI applications that users will love using and developers will love creating. It's based on Python 3.6+ type hints.
+
+**cli.py file** ([`src/myapplication/cli.py`](src/myapplication/cli.py)): defines the CLI application using Typer.
+
+The CLI can be invoked using the `myapplication` command after installation. For example:
+
+```bash
+myapplication --help
+myapplication tiger
+```
+
+For more configuration options and details, see the [Typer documentation](https://typer.tiangolo.com/).
+
 ---
 
 ## Testing
