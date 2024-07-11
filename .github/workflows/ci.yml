@@ -34,11 +34,11 @@ jobs:
           key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
       - name: Install dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-        run: poetry install --no-interaction --no-root
+        run: |
+          cp .env.sample .env
+          poetry install --no-interaction --no-root
       - name: Install library
         run: poetry install --no-interaction
-      - name: Run application
-        run: python -m myapplication.main
       - name: Test with pytest
         run: poetry run pytest tests --cov=src
 
