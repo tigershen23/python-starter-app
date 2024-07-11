@@ -42,7 +42,7 @@ jobs:
       - name: Install library
         run: poetry install --no-interaction
       - name: Run application
-        run: poetry run myapplication
+        run: python -m myapplication.main
       - name: Test with pytest
         run: poetry run pytest tests --cov=src
 
