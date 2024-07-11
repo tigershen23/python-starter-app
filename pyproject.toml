@@ -1,15 +1,15 @@
 [tool.poetry]
-name = "python-boilerplate"
+name = "python-starter-app"
 version = "0.1.0"
-description = "Python boilerplate"
-authors = ["Samuel MARLHENS <samuel.marlhens@proton.me>"]
+description = "Python starter app"
+authors = ["Tiger Shen <tigershen23@gmail.com>"]
 packages = [
     { include = "*", from = "src" }
 ]
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/smarlhens/python-boilerplate#readme"
-repository = "https://github.com/smarlhens/python-boilerplate"
+homepage = "https://github.com/tigershen23/python-starter-app#readme"
+repository = "https://github.com/tigershen23/python-starter-app"
 
 [tool.poetry.scripts]
 myapplication = "myapplication.main:main"
@@ -23,7 +23,7 @@ pytest-cov = "5.0.0"
 mypy = "1.10.0"
 bandit = "1.7.9"
 docformatter = "1.7.5"
-ruff = "0.4.9"
+ruff = "0.5.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

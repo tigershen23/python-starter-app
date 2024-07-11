@@ -58,11 +58,18 @@
    git checkout <branch>
    ```
 
-4. Enable pre-commit hooks
+4. Set up the development environment
 
    ```bash
-   pre-commit install
+   pyenv virtualenv 3.12 <app name>
+   pyenv activate <app name>
+   make dev_install
+   make build
    ```
+
+5. Do a global search for "myapplication" and rename everything to your app name
+
+6. Rename the directories and files containing "myapplication" to your app name
 
 ---
 
