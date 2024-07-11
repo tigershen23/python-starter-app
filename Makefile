@@ -24,5 +24,9 @@ lock:
 run:
 	poetry run myapplication
 
+docker_run:
+	docker build -t myapplication .
+	docker run --env-file .env myapplication
+
 test:
 	poetry run pytest

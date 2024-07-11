@@ -169,6 +169,22 @@ This will execute the local entrypoint function, which in turn calls the remote 
 
 For more configuration options and details, see the [Modal documentation](https://modal.com/docs).
 
+### Streamlit App
+
+[Streamlit](https://streamlit.io/) is an open-source app framework for Machine Learning and Data Science teams. This project includes a simple Streamlit app that demonstrates how to create interactive web applications with Python.
+
+**streamlit_app.py file** (`streamlit_app.py`): defines a Streamlit application that imports and runs the main function from the `myapplication` package, displaying its output in a web interface.
+
+The Streamlit app can be run using the following command:
+
+```bash
+streamlit run streamlit_app.py
+```
+
+This will start a local Streamlit server and open the app in your default web browser. The app displays the output of the main function from myapplication as a large heading (h1) element.
+
+For more configuration options and details, see the [Streamlit documentation](https://docs.streamlit.io/).
+
 ---
 
 ## Testing

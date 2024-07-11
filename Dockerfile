@@ -13,14 +13,14 @@ ENV PATH="$POETRY_HOME/bin:$VENV_PATH/bin:$PATH"
 FROM python-base as builder-base
 RUN apt-get update \
     && apt-get install --no-install-recommends -y \
-        curl \
-        build-essential
+    curl \
+    build-essential
 
 ENV POETRY_VERSION=1.8.3
 RUN curl -sSL https://install.python-poetry.org | python
 
 WORKDIR $PYSETUP_PATH
-COPY ./poetry.lock ./pyproject.toml ./
+COPY ./poetry.lock ./pyproject.toml ./.env ./
 RUN poetry install --no-root --no-dev
 
 FROM builder-base as development
