@@ -1,4 +1,4 @@
-.PHONY: mypy ruff check_ruff fix dev_install lock test snapshot test_live_completion pr fly migrate create_migration reset_db reset_redis graphql benchmarks check_imports version upgrade_version version_commit test_build_and_publish download_and_install build_exponent publish_exponent
+.PHONY: mypy ruff check_ruff fix dev_install test run docker_run
 mypy:
 	mypy --check .
 
@@ -11,6 +11,7 @@ check_ruff:
 
 fix:
 	make ruff
+	make mypy
 
 dev_install:
 	pip install poetry

@@ -3,7 +3,7 @@ import streamlit as st
 from myapplication.main import main
 
 
-def run_streamlit_app():
+def run_streamlit_app() -> None:
     # Call the main function and capture its output
     import io
     import sys

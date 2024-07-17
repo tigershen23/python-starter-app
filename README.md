@@ -39,7 +39,6 @@
    pyenv virtualenv 3.12 <app name>
    pyenv activate <app name>
    make dev_install
-   make build
    ```
 
 4. Do a global search for "myapplication" and rename everything to your app name

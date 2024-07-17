@@ -6,13 +6,13 @@ app = modal.App("myapplication", image=image)
 
 
 @app.function()
-def square(x):
+def square(x: int) -> int:
     print("This code is running on a remote worker!")  # noqa: T201
     return x**2
 
 
 @app.local_entrypoint()
-def main():
+def main() -> None:
     from myapplication.main import main as myapp_main
 
     myapp_main()
@@ -20,4 +20,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main()  # type: ignore
