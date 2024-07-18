@@ -5,7 +5,7 @@ def hello_world() -> str:
     return "Hello World"
 
 
-def main() -> None:
+def main():
     print(f"The value of DUMMY_CONFIG is: {settings.dummy_config}")  # noqa: T201
 
 

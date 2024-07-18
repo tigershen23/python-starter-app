@@ -104,6 +104,14 @@ Options are defined in the [`.pre-commit-config.yaml`](.pre-commit-config.yaml).
 
 For more configuration options and details, see the [Pydantic documentation](https://docs.pydantic.dev/).
 
+### pyright
+
+[pyright](https://github.com/microsoft/pyright) is a fast type checker meant for large Python source bases. It can run in a "watch" mode and performs fast incremental updates when files are modified.
+
+Configuration for pyright is defined in the [`pyproject.toml`](pyproject.toml) file.
+
+For more configuration options and details, see the [configuration docs](https://github.com/microsoft/pyright#configuration).
+
 ### Typer CLI
 
 [Typer](https://typer.tiangolo.com/) is a library for building CLI applications that users will love using and developers will love creating. It's based on Python 3.6+ type hints.

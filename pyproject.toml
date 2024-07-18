@@ -18,6 +18,7 @@ pydantic-settings = "^2.3.4"
 typer = "^0.12.3"
 modal = "^0.63.51"
 streamlit = "^1.36.0"
+pyright = "^1.1.372"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "8.2.2"
@@ -92,3 +93,7 @@ extend-select = [
     "T20",
     "W",
 ]
+
+[tool.pyright]
+include = ["src", "tests"]
+typeCheckingMode = "strict"
