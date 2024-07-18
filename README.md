@@ -33,6 +33,7 @@
    # Clone the repository and set up the project
    git clone https://github.com/tigershen23/python-starter-app.git $APP_NAME
    cd $APP_NAME
+   cp .env.sample .env
    pyenv virtualenv 3.12 $APP_NAME
    pyenv activate $APP_NAME
 
@@ -46,6 +47,7 @@
 
    # Run the application
    make dev_install
+   poetry install
    make run
    ```
 
@@ -64,6 +66,7 @@
 4. Set up the development environment:
 
    ```bash
+   cp .env.sample .env
    pyenv virtualenv 3.12 $APP_NAME
    pyenv activate $APP_NAME
    make dev_install
@@ -81,6 +84,7 @@
    mv src/myapplication src/$APP_NAME
    mv tests/test_myapplication.py tests/test_$APP_NAME.py
    find . -type f -not -path '*/\.*' -exec sed -i '' "s/myapplication/$APP_NAME/g" {} +
+   poetry install
    ```
 
 7. Run `make run` to run the application
