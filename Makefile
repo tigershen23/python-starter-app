@@ -18,7 +18,6 @@ dev_install:
 	pip install poetry
 	poetry install --no-root
 	pre-commit install --install-hooks
-	[ -e python_modules/exponent_server/.env ] || cp python_modules/exponent_server/.env.example python_modules/exponent_server/.env
 
 run:
 	poetry run myapplication
