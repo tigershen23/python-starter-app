@@ -47,52 +47,12 @@ extend-exclude = [
     "dist",
 ]
 target-version = "py312"
-line-length = 90
+line-length = 120
 src = ["src", "tests"]
 
 [tool.ruff.lint]
-extend-select = [
-    "C4",
-    "D200",
-    "D201",
-    "D204",
-    "D205",
-    "D206",
-    "D210",
-    "D211",
-    "D213",
-    "D300",
-    "D400",
-    "D402",
-    "D403",
-    "D404",
-    "D419",
-    "E",
-    "F",
-    "G010",
-    "I001",
-    "INP001",
-    "N805",
-    "PERF101",
-    "PERF102",
-    "PERF401",
-    "PERF402",
-    "PGH004",
-    "PGH005",
-    "PIE794",
-    "PIE796",
-    "PIE807",
-    "PIE810",
-    "RET502",
-    "RET503",
-    "RET504",
-    "RET505",
-    "RUF015",
-    "RUF100",
-    "S101",
-    "T20",
-    "W",
-]
+select = ["ALL"]
+ignore = ["D203", "D213", "COM812", "ISC001"] # Ruff warnings about conflicts
 
 [tool.pyright]
 include = ["src", "tests"]
