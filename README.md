@@ -79,15 +79,6 @@ Rules are defined in the [`pyproject.toml`](pyproject.toml).
 
 For more configuration options and details, see the [configuration docs](https://github.com/charliermarsh/ruff#configuration).
 
-### mypy
-
-[mypy](http://mypy-lang.org/) is an optional static type checker for Python that aims to combine the benefits of
-dynamic (or "duck") typing and static typing.
-
-Rules are defined in the [`pyproject.toml`](pyproject.toml).
-
-For more configuration options and details, see the [configuration docs](https://mypy.readthedocs.io/).
-
 ### bandit
 
 [bandit](https://bandit.readthedocs.io/) is a tool designed to find common security issues in Python code.

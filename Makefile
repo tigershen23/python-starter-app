@@ -1,6 +1,4 @@
-.PHONY: mypy ruff check_ruff fix dev_install test run docker_run
-mypy:
-	mypy --check .
+.PHONY: ruff check_ruff fix dev_install test run docker_run
 
 ruff:
 	ruff format .
@@ -11,7 +9,6 @@ check_ruff:
 
 fix:
 	make ruff
-	make mypy
 
 dev_install:
 	pip install poetry
