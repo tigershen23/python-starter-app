@@ -87,13 +87,6 @@ Rules are defined in the [`pyproject.toml`](pyproject.toml).
 
 For more configuration options and details, see the [configuration docs](https://bandit.readthedocs.io/).
 
-### docformatter
-
-[docformatter](https://github.com/PyCQA/docformatter) is a tool designed to format docstrings to
-follow [PEP 257](https://peps.python.org/pep-0257/).
-
-Options are defined in the [`.pre-commit-config.yaml`](.pre-commit-config.yaml).
-
 ### Pydantic
 
 [Pydantic](https://docs.pydantic.dev/) is a data validation and settings management library using Python type annotations. It's used in this project for managing configuration settings.
