@@ -11,7 +11,10 @@ app = typer.Typer()
 
 @app.command()
 def main(
-    name: str,
+    name: str = typer.Option(
+        "world",
+        help="The name to greet",
+    ),
 ) -> None:
     """Say hi to NAME."""
     print(  # noqa: T201

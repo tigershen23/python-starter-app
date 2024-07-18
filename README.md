@@ -19,33 +19,71 @@
 
 ---
 
-## Installation
+## Setup
 
-1. Clone the git repository
+1. Set your app name in a variable:
 
    ```bash
-   git clone https://github.com/tigershen23/python-starter-app.git <myapplication>
+   APP_NAME="your_app_name_here"
    ```
 
-2. Go into the project directory
+   If you want to just YOLO the setup:
 
    ```bash
-   cd <myapplication>
+   # Clone the repository and set up the project
+   git clone https://github.com/tigershen23/python-starter-app.git $APP_NAME
+   cd $APP_NAME
+   pyenv virtualenv 3.12 $APP_NAME
+   pyenv activate $APP_NAME
+
+   # Update pyproject.toml with your app name
+   sed -i '' "s/name = \"python-starter-app\"/name = \"$APP_NAME\"/" pyproject.toml
+
+   # Rename directories and files, and update references
+   mv src/myapplication src/$APP_NAME
+   mv tests/test_myapplication.py tests/test_$APP_NAME.py
+   find . -type f -not -path '*/\.*' -exec sed -i '' "s/myapplication/$APP_NAME/g" {} +
+
+   # Run the application
+   make dev_install
+   make run
    ```
 
-3. Set up the development environment
+2. Clone the git repository:
 
    ```bash
-   pyenv virtualenv 3.12 <app name>
-   pyenv activate <app name>
+   git clone https://github.com/tigershen23/python-starter-app.git $APP_NAME
+   ```
+
+3. Go into the project directory:
+
+   ```bash
+   cd $APP_NAME
+   ```
+
+4. Set up the development environment:
+
+   ```bash
+   pyenv virtualenv 3.12 $APP_NAME
+   pyenv activate $APP_NAME
    make dev_install
    ```
 
-4. Do a global search for "myapplication" and rename everything to your app name
+5. Update the tool.poetry section of pyproject.toml with your app name:
 
-5. Rename the directories and files containing "myapplication" to your app name
+   ```bash
+   sed -i '' "s/name = \"python-starter-app\"/name = \"$APP_NAME\"/" pyproject.toml
+   ```
 
-6. Run `make run` to run the application
+6. Rename directories and files, and update references:
+
+   ```bash
+   mv src/myapplication src/$APP_NAME
+   mv tests/test_myapplication.py tests/test_$APP_NAME.py
+   find . -type f -not -path '*/\.*' -exec sed -i '' "s/myapplication/$APP_NAME/g" {} +
+   ```
+
+7. Run `make run` to run the application
 
 ---
 
@@ -211,13 +249,13 @@ TOTAL                               7      2    71%
 To build the docker `production` image using [`Dockerfile`](Dockerfile):
 
 ```bash
-docker build . -t my-python-application:latest
+docker build . -t myapplication:latest
 ```
 
 To build the docker `development` image using [`Dockerfile`](Dockerfile):
 
 ```bash
-docker build . --target development -t my-python-application:dev
+docker build . --target development -t myapplication:dev
 ```
 
 ### Run
@@ -225,7 +263,7 @@ docker build . --target development -t my-python-application:dev
 To run the python app example inside Docker:
 
 ```bash
-docker run -it --rm my-python-application:latest # or :dev for development
+docker run -it --rm myapplication:latest # or :dev for development
 ```
 
 <details>
@@ -241,7 +279,7 @@ Hello World
 ### Execute command inside container
 
 ```bash
-docker run -it --rm my-python-application:latest bash
+docker run -it --rm myapplication:latest bash
 ```
 
 ---
