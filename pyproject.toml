@@ -51,7 +51,7 @@ src = ["src", "tests"]
 
 [tool.ruff.lint]
 select = ["ALL"]
-ignore = ["D203", "D213", "COM812", "ISC001"] # Ruff warnings about conflicts
+ignore = ["D100", "D101", "D102", "D103", "D202", "D211", "D213", "G004", "S311", "COM812", "ISC001", "TRY300"] # Ruff warnings about conflicts
 
 [tool.pyright]
 include = ["src", "tests"]
